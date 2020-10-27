@@ -1,0 +1,117 @@
+*{padding:0px;margin:0px;}
+
+body > div:nth-child(1){
+max-width:1200px;
+margin:auto;
+border-left:3px #000 solid;
+font-size: 1.3em;
+}
+
+h3{
+color:red;
+}
+
+table{
+width:100%;
+}
+
+table caption{
+font-style: oblique;
+font-size: 0.7em;
+}
+
+td, th{
+    padding:10px;
+    border:1px #eee solid;
+    background-color: #fff;
+}
+
+td img, form img, input[type="image"]{
+width:40px;
+}
+
+form{
+    padding:20px;
+}
+
+table td:nth-last-child(-n+2){
+    width:50px;
+}
+
+body, header, footer{
+padding:10px;
+}
+
+header{
+background-color: #fff;
+color:#000;
+border-bottom:1px #000 solid;	
+}
+
+header div{
+display:inline-block;
+vertical-align:middle;	
+}
+
+header > div:nth-child(1){
+width:20%;	
+}
+
+header > div:nth-child(2){
+width:80%;	
+}
+
+header h1, h2, .siret{
+text-align:right;	
+}
+
+a{
+text-decoration:none;
+color: #ddd;
+font-size:1.3em;
+}
+nav{}
+
+nav p{
+background-color: #122657;
+color: white;
+display:inline-block;
+padding:10px;
+margin-right:10px;
+/*border-right:1px #fff solid;*/
+}
+
+nav p:hover, .selected{
+background-color: red;
+}
+
+input[type="text"], input[type="submit"], textarea, select, option{
+    padding:10px;
+    font-size:1.3em;
+    width:70%;
+}
+
+form div{
+    margin-bottom:40px;
+}
+form div p:first-child{
+    margin-bottom:3px;
+    font-weight:bold;
+    color:#122657;
+}
+.special_cell{
+    width:50px;
+}
+
+.nouvel-item{
+    text-align:right;
+}
+.submit{
+    text-align:center;
+}
+.submit img, input[type='image'] {
+    width:100px;
+}
+#menu{text-align:center;background-color:#ddd;padding:20px;}
+#main{padding:20px;}
+
