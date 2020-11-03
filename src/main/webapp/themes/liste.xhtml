@@ -12,7 +12,48 @@
         <ui:composition template="../template.xhtml">
             
             <ui:define name="main">
-                <h1>Liste des thèmes</h1>
+                
+                <h3>Liste des thèmes</h3>
+                
+                <h:form>
+                    <p><h:commandLink action="#{themesController.prepareCreate()}">
+                       <h:graphicImage library="MEDIAS" name="ICO_NEW.png"/>                   
+                       </h:commandLink>
+                    </p>
+                    
+                    <h:dataTable var="themes" value="#{themesController.items}">
+                        <h:column>
+                            <f:facet name="header">
+                                ID
+                            </f:facet>
+                            #{themes.idTheme}
+                        </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                                LIBELLE
+                            </f:facet>
+                            #{themes.libelle}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">                               
+                            </f:facet>
+                            <h:commandLink action="#{themesController.prepareUpdate()}">
+                                <h:graphicImage library="MEDIAS" name="ICO_MODIFY.png"/>
+                            </h:commandLink>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">                               
+                            </f:facet>
+                            <h:commandLink action="#{themesController.destroy()}">
+                                <h:graphicImage library="MEDIAS" name="ICO_DELETE.png"/>
+                            </h:commandLink>
+                        </h:column>
+                        
+                    </h:dataTable>
+                    
+                </h:form>
+                
+                
             </ui:define>
             
         </ui:composition>

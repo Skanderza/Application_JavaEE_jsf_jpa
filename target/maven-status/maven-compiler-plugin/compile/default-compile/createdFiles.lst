@@ -1,3 +1,8 @@
+com/mycompany/cda_jsf/ejbs/ThemesFacade.class
 com/mycompany/cda_jsf/JAXRSConfiguration.class
 com/mycompany/cda_jsf/HelloWorld.class
 com/mycompany/cda_jsf/resources/JavaEE8Resource.class
+com/mycompany/cda_jsf/App.class
+com/mycompany/cda_jsf/ejbs/Abstractfacade.class
+com/mycompany/cda_jsf/entities/Themes.class
+controllers/ThemesController.class

@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.mycompany.cda_jsf.entities;
 
 import java.io.Serializable;
@@ -19,45 +23,43 @@ import javax.validation.constraints.Size;
  * @author alliese
  */
 @Entity
-@Table(name = "themes")
+@Table(name = "tags")
 @NamedQueries({
-    @NamedQuery(name = "allThemes", query = "SELECT t FROM Themes t"),
-    @NamedQuery(name = "aThemeById", query = "SELECT t FROM Themes t WHERE t.idTheme = :idTheme"),
-    @NamedQuery(name = "aThemeByLibelle", query = "SELECT t FROM Themes t WHERE t.libelle = :libelle")})
-
-public class Themes implements Serializable {
+    @NamedQuery(name = "Tags.findAll", query = "SELECT t FROM Tags t"),
+    @NamedQuery(name = "Tags.findByIdTag", query = "SELECT t FROM Tags t WHERE t.idTag = :idTag"),
+    @NamedQuery(name = "Tags.findByLibelle", query = "SELECT t FROM Tags t WHERE t.libelle = :libelle")})
+public class Tags implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//AutoIncrement
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id_theme")
-    private Integer idTheme;
-    
+    @Column(name = "id_tag")
+    private Integer idTag;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 60)
     @Column(name = "libelle")
     private String libelle;
 
-    public Themes() {
+    public Tags() {
     }
 
-    public Themes(Integer idTheme) {
-        this.idTheme = idTheme;
+    public Tags(Integer idTag) {
+        this.idTag = idTag;
     }
 
-    public Themes(Integer idTheme, String libelle) {
-        this.idTheme = idTheme;
+    public Tags(Integer idTag, String libelle) {
+        this.idTag = idTag;
         this.libelle = libelle;
     }
 
-    public Integer getIdTheme() {
-        return idTheme;
+    public Integer getIdTag() {
+        return idTag;
     }
 
-    public void setIdTheme(Integer idTheme) {
-        this.idTheme = idTheme;
+    public void setIdTag(Integer idTag) {
+        this.idTag = idTag;
     }
 
     public String getLibelle() {
@@ -71,18 +73,18 @@ public class Themes implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idTheme != null ? idTheme.hashCode() : 0);
+        hash += (idTag != null ? idTag.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Themes)) {
+        if (!(object instanceof Tags)) {
             return false;
         }
-        Themes other = (Themes) object;
-        if ((this.idTheme == null && other.idTheme != null) || (this.idTheme != null && !this.idTheme.equals(other.idTheme))) {
+        Tags other = (Tags) object;
+        if ((this.idTag == null && other.idTag != null) || (this.idTag != null && !this.idTag.equals(other.idTag))) {
             return false;
         }
         return true;
@@ -90,8 +92,7 @@ public class Themes implements Serializable {
 
     @Override
     public String toString() {
-        return "Themes[ idTheme=" + idTheme + " ]" + libelle;
-       // return "Themes{" + "idTheme"
+        return "com.mycompany.cda_jsf.entities.Tags[ idTag=" + idTag + " ]";
     }
     
 }
